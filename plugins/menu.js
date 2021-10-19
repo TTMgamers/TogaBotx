@@ -41,38 +41,44 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let rtotalreg = Object.values(global.DATABASE._data.users).filter(user => user.registered == true).length
     let tags = {
-      'main': 'ㅤM A I N',
-      'absen': 'ㅤA B S E N - M E N U',
-      'game': 'ㅤG A M E',
-      'rpg': 'ㅤR P G',
-      'xp': 'ㅤU A N G & L I M I T',
-      'sticker': 'ㅤS T I C K E R',
-      'kerang': 'ㅤK E R A N G - A J A I B',
-      'quotes': 'ㅤQ U O T E S',
-      'group': 'ㅤG R O U P',
-      'premium': 'ㅤP R E M I U M',
-      'anime': 'ㅤW I B U - M E N U',
-      'job': 'ㅤJ O B - M E N U',
-      'toko': 'ㅤT O K O - M E N U', 
-      'primbon': 'ㅤP R I M B O N - M E N U',
-      'islam': 'ㅤI S L A M - M E N U',
-      'internet': 'ㅤI N T E R N E T',
-      'berita': 'ㅤB E R I T A - M E N U',
-      'nulis': 'ㅤM A K E R - M E N U',
-      'serti': 'ㅤS E R T I - M E N U',
-      'apk': 'ㅤA P K - M O D',
-      'expression': 'ㅤE X P R E S S I O N',
-      'logo': 'ㅤL O G O - M E N U',
-      'anonymous': 'ㅤA N O N Y M O U S - C H A T',
-      'downloader': 'ㅤD O W N L O A D',
-      'sound': 'ㅤS O U N D - M E N U',
-      'stalk': 'ㅤS T A L K - M E N U',
-      'tools': 'ㅤT O O L S',
+      'main': 'M A I N',
+      'absen': 'A B S E N - M E N U',
+      'game': 'G A M E',
+      'rpg': 'R P G',
+      'xp': 'U A N G & L I M I T',
+      'sticker': 'S T I C K E R',
+      'kerang': 'K E R A N G - A J A I B',
+      'quotes': 'Q U O T E S',
+      'group': 'G R O U P',
+      'premium': 'P R E M I U M',
+      'anime': 'W I B U - M E N U',
+      'job': 'J O B - M E N U',
+      'toko': 'T O K O - M E N U', 
+      'primbon': 'P R I M B O N - M E N U',
+      'islam': 'I S L A M - M E N U',
+      'internet': 'I N T E R N E T',
+      'berita': 'B E R I T A - M E N U',
+      'nulis': 'M A K E R - M E N U',
+      'serti': 'S E R T I - M E N U',
+      'apk': 'A P K - M O D',
+      'database': 'D A T A B A S E',
+      'panik': 'P R A N K - M E N U',
+      'expression': 'E X P R E S S I O N',
+      'logo': 'L O G O - M E N U',
+      'image': 'I M A G E - M E N U',
+      'anonymous': 'A N O N Y M O U S - C H A T',
+      'downloader': 'D O W N L O A D',
+      'audio': 'A D I O - M E N U',
+      'spam': 'S P A M - M E N U',
+      'sound': 'S O U N D - M E N U',
+      'stalk': 'S T A L K - M E N U',
+      'tools': 'T O O L S',
       'fun': 'ㅤF U N',
-      'owner': 'ㅤO W N E R',
-      'host': 'ㅤH O S T',
-      'advanced': 'ㅤA D V A N C E D',
-      'info': 'ㅤI N G F O',
+      'owner': 'O W N E R',
+      'host': 'H O S T',
+      'advanced': 'A D V A N C E D',
+      'dewasa': 'H A R U S 18+',
+      'info': '  N G F O',
       '': 'ㅤN O - C A T E G O R Y',
     }
     for (let plugin of Object.values(global.plugins))
@@ -98,25 +104,39 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let before = conn.menu.before || `
 ❕ *INFO*  : kini bot menjual nomor OTP canada, ketik *.toko* untuk melihat produk lainnya.
 
-❏  \`\`\`A N D Y - B O T Z\`\`\`
-├
-├ N A M A : \`\`\`${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}\`\`\`
-├ J A M : \`\`\`%time\`\`\`
-├ T O T A L - U S E R : \`\`\`%totalreg\`\`\`
-├ H A R I : \`\`\`%week %weton\`\`\`
-├ T A N G G A L : \`\`\`%date\`\`\`
-├ T G L - I S L A M : \`\`\`%dateIslamic\`\`\`
-├ U P - T I M E - B O T : \`\`\`%uptime\`\`\`
-├ S C - O R I : 
-├ \`\`\`github.com/Nurutomo/wabot-aq\`\`\`
-├ R E C O D E : \`\`\`A N D Y - O F F C\`\`\`
-├ O W N E R : \`\`\`wa.me/6285795431803\`\`\`
-├ 
-└
+❏  \`\`\`K O M O S U H A I - B O T Z\`\`\`
+
+╭─❏ ❗ _*INFO USER*_
+│➤ *NAMA*  : *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*
+│➤ *UANG*  : *${money}*
+│➤ *LEVEL* : *${level}*
+│➤ *EXP*   : *${exp}*
+│➤ *LIMIT* : *${limit}*
+╰─────────────────────❏
+╭─❏ ❗ _*INFO JAM*_
+│➤ *JAM*.      : *%time*
+│➤ *HARI*      : *%week* *%weton*
+│➤ *TANGGAL*   : *%date*
+│➤ *TGL ISLAM* : *%dateIslamic*
+╰─────────────────────❏
+╭─❏ ❗ _*BAHAN BOT*_
+│➤ *GITHUB* : \`\`\`github.com/Nurutomo\`\`\`
+│➤ *API*    : \`\`\`abdillah-api.herokuapp.com\`\`\`
+│➤ *APIKEY* : *GERATISAN*
+│➤ *RECODE* : *ANDY CHAN:V DAN SHUI*
+╰─────────────────────❏
+╭─❏ ❗ _*INFO BOT*_
+│➤ *NAMA OWNER*  : *Asaa*
+│➤ *NOMER OWNER* : *wa.me/6285240389682*
+│➤ *TOTAL USER*  : *${totalreg}*
+│➤ *UP TIME*     : *${uptime}*
+│➤ *GRUP BOT*    : *.gb*
+╰─────────────────────❏
+ *"© K O M O S U H A I - B O T Z"*
 %readmore`
-    let header = conn.menu.header || '❏ ```%category```\n'
-    let body   = conn.menu.body   || '❏  *%cmd%islimit*'
-    let footer = conn.menu.footer || '\n'
+    let header = conn.menu.header || '*╭─❏"* ❗ _*%category*_'
+    let body   = conn.menu.body   || '*│➤* %cmd%islimit'
+    let footer = conn.menu.footer || '*╰─────────────────────❏* \n'
     let after  = conn.menu.after  || '❏ ㅤ```T E N G S - T O``` \n\n*N U R U T O M O*\n*A N T I - B O T*\n*A N D Y - B O T Z*\n*A R I F F B*\n*W I L D A N - I Z Z U D I N*\n*D R A W L - N A G*\n\n❏ ㅤ```T E N G S - T O - T E A M``` \n\n*A N D Y × A N T I - B O T Z - O F F C*\n*A R G I O - D E V*'
     let _text  = before + '\n'
     for (let tag in groups) {
@@ -153,7 +173,7 @@ conn.reply(m.chat, text.trim(),  {
  },
  message: {
   imageMessage: {
-   caption: `*Waduh*`,
+   caption: `Hi ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])} Jelek belum mandi yah?*`,
    jpegThumbnail: fs.readFileSync(`./src/okok.jpg`)
   }
  }

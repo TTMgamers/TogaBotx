@@ -18,7 +18,7 @@ key: {
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": fs.readFileSync(`./src/okok.jpg`) //Gambarnye
 					},
-					"title": "ANDY-BOTZ", //Kasih namamu
+					"title": "K O M O S H U A I-BOTZ", //Kasih namamu
 					"description": "© ANDY-OFFC", 
 					"currencyCode": "USD",
 					"priceAmount1000": "6850000",
@@ -34,10 +34,10 @@ let { limit, exp, money, lastclaim, registered, regTime, role, age, level } = gl
 let text = `
 \`\`\`Hi, ${ucapan()} ${ucapin()} @${who.replace(/@.+/, '')} ✨\`\`\`
 
-\`\`\`NOTE - BOT TIDAK AKAN MERESPON DI DALAM GRUP JIKA PESAN SEMENTARA TIDAK DIMATIKAN.\`\`\`
+\`\`\`NOTE - BOT TIDAK AKAN MERESPON DI DALAM GRUP JIKA PESAN SEMENTARA TIDAK DIMATIKAN. MAGRIB BOT OF SAMPAI PAGI\`\`\`
 `.trim()
 
- await conn.send2ButtonImg(m.chat, text.trim(), `./src/logo.jpg`, "© A N D Y - B O T Z", 'Menu', '.hah', 'Owner', '.owner', { quoted: freply, sendEphemeral: true, contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 135, isForwarded: true }})
+ await conn.send2ButtonImg(m.chat, text.trim(), `./src/logo.jpg`, "© K O M O S H U A I - B O T Z", 'Menu', '.hah', 'Owner', '.owner', { quoted: freply, sendEphemeral: true, contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 135, isForwarded: true }})
 }
 handler.command = /^(menu|help)$/i
 handler.owner = false
