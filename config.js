@@ -4,12 +4,46 @@ global.mods = ['6282331033919','6285795431803','6282164659362']  // Want some he
 global.prems = ['6282331033919','6285795431803','6282164659362','6285821918425','628990745458','6283844878048'] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
+  bx: 'https://bx-hunter.herokuapp.com',
+
+  hardianto: 'https://hardianto-chan.herokuapp.com',
+
+  jonaz: 'https://jonaz-api-v2.herokuapp.com',
+
+  neoxr: 'https://neoxr-api.herokuapp.com',
+
   nrtm: 'https://nurutomo.herokuapp.com',
-  xteam: 'https://api.xteam.xyz'
+
+  pencarikode: 'https://pencarikode.xyz',
+
+  xteam: 'https://api.xteam.xyz',
+
+  zahir: 'https://zahirr-web.herokuapp.com',
+
+  zekais: 'http://zekais-api.herokuapp.com',
+
+  zeks: 'https://api.zeks.xyz',
+
 }
-global.APIKeys = { // APIKey Here
+
+global.APIKeys = { // APIKey nya disini
+
   // 'https://website': 'apikey'
-  'https://api.xteam.xyz': 'MIMINETBOT'
+
+  'https://bx-hunter.herokuapp.com': 'Ikyy69',
+
+  'https://hardianto-chan.herokuapp.com': 'hardianto',
+
+  'https://neoxr-api.herokuapp.com': 'yntkts',
+
+  'https://pencarikode.xyz': 'pais',
+
+  'https://api.xteam.xyz': 'MIMINETBOT',
+
+  'https://zahirr-web.herokuapp.com': 'zahirgans',
+
+  'https://api.zeks.xyz': 'apivinz',
+
 }
 
 // Sticker WM
