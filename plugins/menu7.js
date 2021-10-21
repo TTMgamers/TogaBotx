@@ -135,7 +135,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
       "listMessage": {
         "title": "List Menu",
-        "description": "© NASA BOT",
+        "description": "© KOMOSHUAI BOT",
         "buttonText": "Click Disini !!",
         "listType": "SINGLE_SELECT",
         "sections": [
@@ -388,7 +388,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 }
 handler.help = ['menu', 'help', '?', 'nasa']
 handler.tags = ['main']
-handler.command = /^(menu1|help1|nasa1|\?)$/i
+handler.command = /^(menu|help|nasa|\?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
