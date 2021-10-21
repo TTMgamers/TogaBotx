@@ -39,7 +39,7 @@ let text = `
 
  await conn.send2ButtonImg(m.chat, text.trim(), `./src/logo.jpg`, "© K O M O S H U A I - B O T Z", 'Menu', '.hah', 'Owner', '.owner', { quoted: freply, sendEphemeral: true, contextInfo: { mentionedJid: conn.parseMention(text), forwardingScore: 135, isForwarded: true }})
 }
-handler.command = /^(menu|help)$/i
+handler.command = /^(menu2|help2)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
